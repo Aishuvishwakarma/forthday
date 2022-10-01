@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import {Container,Row,Col,InputGroup,Form,Button} from 'react-bootstrap';
 import { Link } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 
 
@@ -30,7 +29,6 @@ OnsubmitData = ()=>{
 
 
 componentDidMount(){
-  this.notify()
  
  let data = JSON.parse(localStorage.getItem('users'))
  if(data){
@@ -39,12 +37,11 @@ componentDidMount(){
   this.setState({sigin:{email:email,password:password}})
  }
 }
-notify = () => toast("Wow so easy!");
+
 
   render() {
     return (
         <Container>
-         <ToastContainer />
         <Row className='bg-light mt-5'>
           <Col></Col>
           <Col>
